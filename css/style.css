@@ -1128,6 +1128,7 @@
 		margin: 0;
 		padding: 14em 0 14em 0;
 		cursor: default;
+		height: 0;
 	}
 	
 		#header header
