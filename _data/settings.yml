@@ -1,0 +1,283 @@
+#-------------------------------
+# General Site Settings
+
+title:
+logo:
+author: rutuldave
+description: I am an entrepreneur who loves making products and growing startups.
+email: rutuldave@gmail.com
+# phone: +880 2544 658 256
+address: Brooklyn, NY
+# copyright: Copyright &copy; 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Getjekyllthemes](https://getjekyllthemes.com)
+
+menu:
+- {name: About, link: '/about'}
+# - {name: Blog, link: '/blog'}
+- {name: Projects, link: '/projects'}
+# - {name: Contact, link: '/contact'}
+
+
+#-------------------------------
+# Google Analytics Section
+
+# Analytics helps you understand who visits your website.
+# Learn more at: http://support.google.com/analytics/answer/1008065
+
+# NOTE: If you want to use Google Analytics for basic web tracking: Just uncomment and enter your UA-Code here.
+
+google-analytics: UA-47070768-1
+
+
+#-------------------------------
+# Comment Section (Disqus)
+
+disqus-identifier: # Add your shortname for Disqus Comment. For example mr-brown
+
+
+#-------------------------------
+# Hero Section
+
+hero:
+  hero-title: Hi! I’m <br> Rutul Davé
+
+social:
+- {icon: "ti-twitter", link: "https://twitter.com/letsfixtheworld"}
+- {icon: "ti-linkedin", link: "https://www.linkedin.com/in/rutul-dave/"}
+- {icon: "ti-instagram", link: "https://www.instagram.com/rutuldave/"}
+
+
+#-------------------------------
+# About (Section and Page)
+
+# About Section
+blurb:
+  I am an entrepreneur who loves making products and growing startups. I spend most of my time at the intersection of business, technology, and finance.
+
+blurb-btn-link: '/about'
+blurb-btn-name: more about me ->
+
+
+# About Page
+
+# Work Process Section
+work-process:
+  - title : "Research and Plan"
+    icon : "assets/images/icons/plan.png"
+    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+  - title : "Design and Develop"
+    icon : "assets/images/icons/design.png"
+    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+  - title : "Deliver"
+    icon : "assets/images/icons/print.png"
+    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+
+# My Team Section
+team:
+  - title : "Jack Schenziwe"
+    image : "assets/images/team/member-1.png"
+    designation : "Project Manager"
+
+  - title : "Julias Carlie"
+    image : "assets/images/team/member-2.png"
+    designation : "Web Developer"
+
+  - title : "John Doe"
+    image : "assets/images/team/member-3.png"
+    designation : "Designer"
+
+
+#-------------------------------
+# Skills Section
+
+skills-title: Skills
+skills:
+- {name: Web Design, color: '#fdb157', value: '90%'}
+- {name: Logo Design, color: '#9473e6', value: '60%'}
+- {name: After Effects, color: '#bdecf6', value: '80%'}
+- {name: Web App, color: '#ffbcaa', value: '70%'}
+
+
+#-------------------------------
+# Exprerience Section
+
+experience-title: Experience
+experience:
+- {name: Junior UX Designer, icon: 'icon-1.png', date: 'Jan 2007 - Feb 2009', organization: 'WEBEX'}
+- {name: UX & UI Designer, icon: 'icon-2.png', date: 'Mar 2009 - Aug 2014', organization: 'AUGMEDIX'}
+- {name: Senior UI Designer, icon: 'icon-3.png', date: 'Sep 2014 - Present', organization: 'THEMEFISHER'}
+
+
+#-------------------------------
+# Education Section
+
+education-title: Education
+education:
+- {name: Masters in Computer Science, date: '2002', organization: 'University of Southern California'}
+- {name: Bachelors in Computer Science, date: '2000', organization: 'M.S. University'}
+
+# -------------------------------
+# Services Section
+
+services-title: Services
+services:
+- {
+    name: UI Design,
+    icon: ti-palette,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    active: # Add true to select section
+  }
+- {
+    name: UX Design,
+    icon: ti-vector,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    active: true # Add true to select section
+  }
+- {
+    name: Interaction Design,
+    icon: ti-panel,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    active: # Add true to select section
+  }
+
+
+
+#-------------------------------
+# Portfolio (Section and Page)
+
+# Portfolio Home Section
+portfolio-home-items:
+  - image : "assets/images/portfolio/30daysofproduct.png"
+    url: "https://www.30daysofproduct.com/"
+
+  - image : "assets/images/portfolio/startupctochecklist.png"
+    url: "https://github.com/stockandawe/saas-startup-cto-checklist"
+
+  - image : "assets/images/portfolio/productpicktwo.png"
+    url: "http://rutuldave.com/product-pick-two/"
+
+  - image : "assets/images/portfolio/usybeeresume.png"
+    url: "http://usybee.com/"
+
+  - image : "assets/images/portfolio/gotitdone.png"
+    url: "https://i-got-it-done.herokuapp.com/"
+
+  - image : "assets/images/portfolio/medium.png"
+    url: "https://medium.com/@letsfixtheworld"
+
+  - image : "assets/images/portfolio/vcmemos.png"
+    url: "http://rutuldave.com/venture-investment-memos/"
+
+# Portfolio Page
+portfolio-label:
+- {
+    title : "Side Project",
+    type : "sideproject"
+  }
+- {
+    title : "Open Source",
+    type : "opensource"
+  }
+- {
+    title : "Content",
+    type : "content"
+  }
+
+portfolio-items:
+  - image : "assets/images/portfolio/30daysofproduct.png"
+    url: "https://www.30daysofproduct.com/"
+    portfolio-type:
+     - type: "sideproject"
+
+  - image : "assets/images/portfolio/startupctochecklist.png"
+    url: "https://github.com/stockandawe/saas-startup-cto-checklist"
+    portfolio-type:
+      - type: "opensource"
+      - type: "content"
+
+  - image : "assets/images/portfolio/medium.png"
+    url: "https://medium.com/@letsfixtheworld"
+    portfolio-type:
+      - type: "content"
+
+  - image : "assets/images/portfolio/productpicktwo.png"
+    url: "http://rutuldave.com/product-pick-two/"
+    portfolio-type:
+      - type: "opensource"
+
+  - image : "assets/images/portfolio/usybeeresume.png"
+    url: "http://usybee.com/"
+    portfolio-type:
+      - type: "sideproject"
+
+  - image : "assets/images/portfolio/gotitdone.png"
+    url: "https://i-got-it-done.herokuapp.com/"
+    portfolio-type:
+      - type: "sideproject"
+
+  - image : "assets/images/portfolio/vcmemos.png"
+    url: "http://rutuldave.com/venture-investment-memos/"
+    portfolio-type:
+      - type: "content"
+
+#-------------------------------
+# Testimonials Section
+
+testimonial-items:
+  - name: "Jesica Gomez"
+    image: "assets/images/testimonial/client-1.png"
+    designation : "CEO, Funder"
+    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
+  - name: "Jesica Gomez"
+    image: "assets/images/testimonial/client-1.png"
+    designation: "CEO, Funder"
+    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
+  - name: "Jesica Gomez"
+    image: "assets/images/testimonial/client-1.png"
+    designation: "CEO, Funder"
+    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
+
+#-------------------------------
+# Client Slider Section
+
+client-slider-items:
+  - logo: "assets/images/clients-logo/client-logo-1.png"
+    url: "#"
+
+  - logo: "assets/images/clients-logo/client-logo-2.png"
+    url: "#"
+
+  - logo: "assets/images/clients-logo/client-logo-3.png"
+    url: "#"
+
+  - logo: "assets/images/clients-logo/client-logo-4.png"
+    url: "#"
+
+  - logo: "assets/images/clients-logo/client-logo-5.png"
+    url: "#"
+
+  - logo: "assets/images/clients-logo/client-logo-1.png"
+    url: "#"
+
+  - logo: "assets/images/clients-logo/client-logo-2.png"
+    url: "#"
+
+  - logo: "assets/images/clients-logo/client-logo-3.png"
+    url: "#"
+
+  - logo: "assets/images/clients-logo/client-logo-4.png"
+    url: "#"
+
+  - logo: "assets/images/clients-logo/client-logo-5.png"
+    url: "#"
+
+#-------------------------------
+# Contact Section
+
+contact-title: Contact Info
+contact-email: rutuldave@gmail.com
