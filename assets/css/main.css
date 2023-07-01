@@ -81,3 +81,7 @@ h1 {
 	font-size: 26px;
 	padding: 12px;
 }
+
+li {
+    font-size: 1.1em;
+}
