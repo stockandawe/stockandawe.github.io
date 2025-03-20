@@ -1,87 +1,271 @@
+/*
+ * Main CSS for Rutul Dave's personal website
+ * Redesigned with inspiration from kmartinezcarter.com
+ */
+
+/* Base Styles */
 body {
-  background-color: #f2f2f2;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    color: #555;
-
-    -webkit-font-smoothing: antialiased;
-    -webkit-overflow-scrolling: touch;
+  background-color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #333333;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+  padding: 0;
 }
 
-/* Titles */
+.container {
+  max-width: 1140px;
+  padding: 0 20px;
+}
+
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    color: #333;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  color: #111111;
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: -0.3px;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555555;
+}
 
 /* Paragraph & Typographic */
 p {
-    line-height: 28px;
-    margin-bottom: 25px;
-    font-size: 20px;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+.subtitle {
+  color: #777777;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 400;
 }
 
 .centered {
-    text-align: center;
+  text-align: center;
 }
 
 /* Links */
 a {
-    color: #02aedc;
-    word-wrap: break-word;
-
-    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
-    transition: color 0.1s ease-in, background 0.1s ease-in;
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
 }
 
 a:hover,
 a:focus {
-    color: #269FD9;
-    text-decoration: none;
-    outline: 0;
+  color: #004d99;
+  text-decoration: underline;
 }
 
-a:before,
-a:after {
-    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
-    transition: color 0.1s ease-in, background 0.1s ease-in;
+/* Header & Navigation */
+.site-header {
+  padding: 50px 0 30px;
 }
 
- hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+.site-title {
+  margin-bottom: 5px;
 }
 
-.logo {
-	text-align: center;
-	margin-top: 25px;
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 0;
 }
 
-h1 {
-	font-size: 70px;
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-.w {
-	margin-top: 60px;
-}
-.w i {
-	font-size: 26px;
-	padding: 12px;
+.nav-menu li {
+  margin-left: 30px;
 }
 
-li {
-    font-size: 1.1em;
+.nav-menu a {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: #555555;
+}
+
+.nav-menu a:hover {
+  color: #111111;
+  text-decoration: none;
+}
+
+/* Content Sections */
+.section {
+  margin-bottom: 60px;
+}
+
+.profile-section {
+  display: flex;
+  align-items: flex-start;
+  margin: 50px 0;
+}
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 50px;
+}
+
+.profile-content {
+  flex: 1;
+}
+
+.headline {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+/* Lists */
+ul.content-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+ul.content-list li {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+/* Dividers */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  margin: 40px 0;
+  padding: 0;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid #eeeeee;
+  padding-left: 20px;
+  margin-left: 0;
+  color: #555555;
+  font-style: italic;
+}
+
+.text-muted {
+  color: #777777;
+  font-style: normal;
+  font-size: 1.3rem;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 80px;
+  padding: 40px 0;
+  border-top: 1px solid #eeeeee;
+  color: #777777;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links li {
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .profile-section {
+    flex-direction: column;
+  }
+
+  .profile-image {
+    margin-right: 0;
+    margin-bottom: 30px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .nav-container {
+    justify-content: center;
+  }
+
+  .nav-menu li {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .headline {
+    font-size: 1.5rem;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-menu li {
+    margin: 5px 10px;
+  }
 }
