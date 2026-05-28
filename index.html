@@ -1,243 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Entrepreneur. Technologist. Product Maker.">
-    <meta name="author" content="Rutul Dav&egrave;">
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rutul Davè — entrepreneur, technologist, and product maker. Cofounder & CTO of Maxwell.">
+  <title>Rutul Davè — Entrepreneur, Technologist, Product Maker</title>
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <!-- Google Analytics (preserve from the original site) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8JMR386WRC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8JMR386WRC');
+  </script>
+  <style>
+    /* ================================================================
+       HOMEPAGE · Editorial direction
+       Section-specific layout on top of the shared base (site.css).
+       ================================================================ */
 
-    <title>Rutul Dav&egrave; | Entrepreneur, Technologist, Product Maker</title>
+    /* ---- HERO ---- */
+    .hero-a { padding-top: clamp(52px, 9vw, 104px); padding-bottom: clamp(20px, 4vw, 44px); }
+    .hero-a h1 {
+      font-weight: 800; font-size: clamp(38px, 8.2vw, 92px); line-height: 0.98;
+      letter-spacing: -0.045em; margin: 16px 0 0; max-width: 16ch;
+    }
+    .hero-a h1 em { font-style: normal; color: var(--muted); }
+    .hero-a .hero-bio { font-size: clamp(16.5px, 1.7vw, 20px); color: var(--ink-soft); max-width: 54ch; margin: 28px 0 0; line-height: 1.55; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .prevstrip { margin-top: clamp(36px, 6vw, 60px); border-block: 1px solid var(--line); padding-block: 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 26px; }
+    .prevstrip .lab { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint); }
+    .prevstrip .co { font-weight: 600; font-size: 15px; color: var(--ink-soft); letter-spacing: -0.01em; }
+    .prevstrip .sep { width: 4px; height: 4px; border-radius: 999px; background: var(--faint); }
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    /* ---- ABOUT ---- */
+    .about-grid { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: clamp(24px, 5vw, 64px); align-items: start; }
+    .about-body p { font-size: clamp(16.5px, 1.5vw, 19px); color: var(--ink-soft); margin: 0 0 22px; max-width: 62ch; line-height: 1.62; }
+    .about-body p:last-child { margin-bottom: 0; }
+    .about-body strong { font-weight: 700; color: var(--ink); }
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    /* ---- PROJECTS ---- */
+    .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .pcard { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 24px 22px; display: flex; flex-direction: column; transition: transform .2s, border-color .2s, box-shadow .2s; }
+    .pcard:hover { transform: translateY(-3px); border-color: var(--faint); box-shadow: 0 16px 38px -26px oklch(0.3 0 0 / 0.4); }
+    .pcard .pbadge { position: absolute; top: 22px; right: 22px; font-family: var(--mono); font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); display: inline-flex; align-items: center; gap: 6px; }
+    .pcard .pbadge::before { content: ""; width: 6px; height: 6px; border-radius: 999px; background: var(--ink); }
+    .pcard .pbadge.code::before { background: var(--faint); }
+    .pname { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    .ptitle { font-weight: 700; font-size: 21px; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 9px; padding-right: 64px; }
+    .pdesc { font-size: 14.5px; color: var(--ink-soft); line-height: 1.55; margin: 0 0 18px; flex: 1; }
+    .plink { font-family: var(--mono); font-size: 12.5px; color: var(--ink); display: inline-flex; align-items: center; gap: 7px; align-self: flex-start; border-bottom: 1px solid var(--line); padding-bottom: 2px; transition: gap .18s, border-color .18s; }
+    .pcard:hover .plink { gap: 11px; border-color: var(--ink); }
 
-    <!-- Custom styles for this template -->
-    <link href="assets/css/main.css" rel="stylesheet">
+    /* ---- WRITING ---- */
+    .writing-cols { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(28px, 5vw, 56px); }
+    .pile-h { font-family: var(--mono); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; display: flex; align-items: baseline; gap: 10px; }
+    .pile-h span { color: var(--faint); }
+    .pile { display: flex; flex-direction: column; }
+    .pile a { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 16px; padding: 16px 4px; border-top: 1px solid var(--line); transition: padding-left .2s; }
+    .pile a:hover { padding-left: 8px; }
+    .pile a:last-child { border-bottom: 1px solid var(--line); }
+    .pile .n { font-family: var(--mono); font-size: 12px; color: var(--faint); }
+    .pile .t { font-weight: 600; font-size: 18px; letter-spacing: -0.01em; }
+    .pile .ar { color: var(--faint); transition: color .2s, transform .2s; }
+    .pile a:hover .ar { color: var(--ink); transform: translate(3px,-3px); }
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47070768-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    /* ---- BOOKS ---- */
+    .book-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 36px; }
+    .book { display: grid; grid-template-columns: 30px 1fr; align-items: center; gap: 16px; padding: 16px 4px; border-bottom: 1px solid var(--line-soft); transition: padding-left .2s; }
+    .book:hover { padding-left: 8px; }
+    .book .spine { width: 24px; height: 34px; border-radius: 2px 4px 4px 2px; background: var(--tint); border: 1px solid var(--line); border-left: 3px solid var(--ink); }
+    .book:nth-child(2n) .spine { border-left-color: var(--faint); }
+    .book .bt { font-weight: 600; font-size: 16.5px; line-height: 1.3; }
 
-      gtag('config', 'UA-47070768-1');
-    </script>
-  </head>
+    /* ---- AWARDS ---- */
+    .award { display: grid; grid-template-columns: 84px 1fr auto; gap: 22px; align-items: baseline; padding: 19px 0; border-top: 1px solid var(--line); }
+    .award:last-child { border-bottom: 1px solid var(--line); }
+    .award .yr { font-family: var(--mono); font-size: 14px; color: var(--ink); font-weight: 500; }
+    .award .at { font-size: 16.5px; color: var(--ink); line-height: 1.5; }
+    .award .at a { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; transition: text-decoration-color .2s; }
+    .award .at a:hover { text-decoration-color: var(--ink); }
+    .award .org { font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
 
-  <body>
-    <div class="container">
-      <!-- Header Section -->
-      <header class="site-header">
-        <h1 class="site-title">RUTUL DAVÈ</h1>
-        <div class="subtitle">Entrepreneur. Technologist. Product Maker.</div>
+    /* ================================================================
+       RESPONSIVE  ·  tablet → phone
+       ================================================================ */
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; gap: 16px; }
+      .writing-cols { grid-template-columns: 1fr; gap: 36px; }
+      .book-list { grid-template-columns: 1fr; }
+    }
 
-        <nav class="nav-container">
-          <ul class="nav-menu">
-            <li><a href="#about">About</a></li>
-            <li><a href="#principles">Principles</a></li>
-            <li><a href="#frameworks">Frameworks</a></li>
-            <li><a href="#books">Books</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#awards">Awards</a></li>
-          </ul>
-        </nav>
-      </header>
+    @media (max-width: 680px) {
+      .project-grid { grid-template-columns: 1fr; }
+      /* section header: stack the "view all" link under the title, left-aligned */
+      .head-row { align-items: flex-start; gap: 14px; }
+      .head-row .viewall { white-space: normal; }
+      .award { grid-template-columns: 56px 1fr; gap: 16px; }
+      .award .org { display: none; }
+    }
 
-      <!-- Profile Section -->
-      <section id="about" class="profile-section">
-        <!-- If you have a profile image, uncomment and add the path -->
-        <!-- <img src="assets/img/profile.jpg" alt="Rutul Davè" class="profile-image"> -->
+    /* phone — the size most visitors actually use */
+    @media (max-width: 560px) {
+      .hero-a h1 { font-size: clamp(34px, 11vw, 50px); line-height: 1.0; letter-spacing: -0.035em; }
+      .hero-a .hero-bio { margin-top: 22px; }
+      /* full-width, easily-tappable hero buttons */
+      .hero-actions { gap: 10px; }
+      .hero-actions .btn { flex: 1 1 100%; justify-content: center; padding-block: 14px; }
+      .prevstrip { gap: 10px 18px; }
+      .prevstrip .co { font-size: 14px; }
+      .pcard { padding: 20px 20px 20px; }
+      .ptitle { font-size: 19px; padding-right: 56px; }
+      .pile .t { font-size: 16.5px; }
+      .pile a { gap: 12px; padding: 15px 2px; }
+      /* contact CTA buttons go full width too */
+      .contact-actions .btn { flex: 1 1 100%; justify-content: center; padding-block: 14px; }
+      .footer-grid { gap: 18px; }
+      .footer-links a { width: 44px; height: 44px; }
+    }
 
-        <div class="profile-content">
-          <h2 class="headline">ENTREPRENEUR, TECHNOLOGIST, AND PRODUCT MAKER</h2>
+    /* very small / older phones — keep the headline from crowding the edges */
+    @media (max-width: 380px) {
+      .hero-a h1 { font-size: 32px; }
+      .ptitle { padding-right: 48px; }
+    }
+  </style>
+</head>
+<body>
 
-          <p>
-            I am an entrepreneur who loves making products and growing startups. Currently, I am the
-            Cofounder & CTO of <a href="https://www.himaxwell.com" target="_blank">Maxwell</a>,
-            a company that builds software and services to power the future of home financing.
-          </p>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top"><span class="mono-mark">RD</span> Rutul Davè</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#building">Building</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#books">Books</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a class="nav-cta" href="mailto:rutuldave@gmail.com">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
-          <p>
-            Before Maxwell, I founded <a href="http://brightfunds.org" target="_blank">Bright Funds</a> in 2012
-            with a mission to design experiences that unlock passion and capital from a
-            new generation of donors focused on impact. Before creating Bright Funds, I worked
-            in marketing, product design, and software engineering at various successful bay-area
-            startups and venture-backed private companies including Coverity (acquired by Synopsys),
-            Omneon (acquired by Harmonic), Topspin (acquired by Cisco) and Procket Networks (acquired by Cisco).
-          </p>
+  <main id="top">
 
-          <p>
-            Some of my public software projects and code can be found on <a href="https://github.com/stockandawe" target="_blank">GitHub</a>.
-          </p>
+    <!-- HERO -->
+    <section class="hero-a wrap">
+      <p class="kicker">Entrepreneur · Technologist · Product Maker</p>
+      <h1 class="reveal">Hi, I'm Rutul. I build products and <em>grow startups.</em></h1>
+      <p class="hero-bio reveal">I'm the Cofounder &amp; CTO of <a href="https://www.himaxwell.com" target="_blank" rel="noopener">Maxwell</a>, building software and services to power the future of home financing. I love making things on the internet and sharing what I learn along the way.</p>
+      <div class="hero-actions reveal">
+        <a class="btn btn-primary" href="#work">See what I've made <span class="arrow">↗</span></a>
+        <a class="btn btn-ghost" href="https://github.com/stockandawe" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="prevstrip reveal">
+        <span class="lab">Previously</span>
+        <span class="co">Bright Funds</span><span class="sep"></span>
+        <span class="co">Coverity</span><span class="sep"></span>
+        <span class="co">Omneon</span><span class="sep"></span>
+        <span class="co">Topspin</span><span class="sep"></span>
+        <span class="co">Procket Networks</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section wrap" id="about">
+      <div class="about-grid reveal">
+        <div>
+          <p class="kicker">About</p>
+          <h2 class="statement">Builder, founder, and lifelong product maker.</h2>
         </div>
-      </section>
+        <div class="about-body">
+          <p>I'm an entrepreneur who loves making products and growing startups. Currently, I'm the Cofounder &amp; CTO of <a href="https://www.himaxwell.com" target="_blank" rel="noopener">Maxwell</a>, a company that builds software and services to power the future of home financing.</p>
+          <p>Before Maxwell, I founded <a href="http://brightfunds.org" target="_blank" rel="noopener">Bright Funds</a> in 2012 with a mission to design experiences that unlock passion and capital from a new generation of donors focused on impact. Before that, I worked in marketing, product design, and software engineering at successful Bay Area startups and venture-backed companies including <strong>Coverity</strong> (acquired by Synopsys), <strong>Omneon</strong> (acquired by Harmonic), <strong>Topspin</strong> (acquired by Cisco), and <strong>Procket Networks</strong> (acquired by Cisco).</p>
+          <p>Some of my public software projects and code can be found on <a href="https://github.com/stockandawe" target="_blank" rel="noopener">GitHub</a>.</p>
+        </div>
+      </div>
+    </section>
 
-      <hr>
+    <!-- PROJECTS -->
+    <section class="section wrap" id="work">
+      <div class="head-row reveal">
+        <div>
+          <p class="kicker">Projects</p>
+          <h2 class="statement">Concepts that went from <em>idea to internet.</em></h2>
+        </div>
+        <a class="viewall" href="https://github.com/stockandawe" target="_blank" rel="noopener">All repos on GitHub →</a>
+      </div>
+      <div class="project-grid reveal">
+        <article class="pcard">
+          <span class="pbadge">Live</span>
+          <p class="pname">App</p>
+          <h3 class="ptitle">Make Your Point</h3>
+          <p class="pdesc">A 25-day daily-practice program for working professionals, based on the principles in <em>Simply Said: Communicating Better at Work and Beyond</em> by Jay Sullivan.</p>
+          <a class="plink" href="https://makeyourpoint.app" target="_blank" rel="noopener">makeyourpoint.app →</a>
+        </article>
+        <article class="pcard">
+          <span class="pbadge">Live</span>
+          <p class="pname">App</p>
+          <h3 class="ptitle">StoryCoach</h3>
+          <p class="pdesc">Develop your storytelling skills using AI-powered writing tools, daily habits, and skill-building exercises.</p>
+          <a class="plink" href="https://storycoach.app" target="_blank" rel="noopener">storycoach.app →</a>
+        </article>
+        <article class="pcard">
+          <span class="pbadge">Live</span>
+          <p class="pname">Blog</p>
+          <h3 class="ptitle">Decision Ninja Blog</h3>
+          <p class="pdesc">Tools, tips, and tricks to improve the quality of all your personal and professional decisions.</p>
+          <a class="plink" href="https://rutuldave.com/decision-ninja-blog/" target="_blank" rel="noopener">Read the blog →</a>
+        </article>
+        <article class="pcard">
+          <span class="pbadge code">Open source</span>
+          <p class="pname">Checklist</p>
+          <h3 class="ptitle">SaaS Startup CTO Checklist</h3>
+          <p class="pdesc">A running checklist of all the things to consider as the CTO of a SaaS startup.</p>
+          <a class="plink" href="https://github.com/stockandawe/saas-startup-cto-checklist" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+      </div>
+    </section>
 
-      <!-- Professional Principles Section -->
-      <section id="principles" class="section">
-        <h3>Professional Principles</h3>
-        <div class="subtitle">A collection of ideas, quotes, thoughts, and stories that guide my daily actions and decision-making.</div>
+    <!-- TRACKER -->
+    <section class="section wrap" id="building">
+      <div class="head-row reveal">
+        <div>
+          <p class="kicker">Live tracker</p>
+          <h2 class="statement">Always building <em>something.</em></h2>
+        </div>
+        <p class="lede" style="max-width:30ch;"><a href="https://streamlinepublishing.com/inside-art/make-more-pots/" target="_blank" rel="noopener">Making more pots</a> — a year of commits, pushes, and pull requests.</p>
+      </div>
+      <div class="tracker reveal" id="ghA">
+        <div class="tracker-top">
+          <div class="tracker-total"><b data-total>—</b><span>contributions in the last year</span></div>
+          <a class="tracker-handle" href="https://github.com/stockandawe" target="_blank" rel="noopener">@stockandawe ↗</a>
+        </div>
+        <div class="cal-scroll"><div class="cal" data-cal></div></div>
+        <div class="cal-foot">
+          <span class="cal-note" data-note>loading…</span>
+          <span class="cal-legend">Less
+            <span class="cal-cell"></span>
+            <span class="cal-cell" data-lvl="1"></span>
+            <span class="cal-cell" data-lvl="2"></span>
+            <span class="cal-cell" data-lvl="3"></span>
+            <span class="cal-cell" data-lvl="4"></span>
+            More</span>
+        </div>
+      </div>
+    </section>
 
-        <ul class="content-list">
-          <li><a href="consistency.html">Consistency</a></li>
-          <li><a href="focus.html">Focus</a></li>
-          <li><a href="happiness.html">Happiness</a></li>
-          <li><a href="monkeys-and-pedestals.html">Monkeys and Pedestals</a></li>
-          <li><a href="questions.html">Questions</a></li>
-          <li><a href="stoicism.html">Stoicism</a></li>
-          <li><a href="simple-not-easy.html">Simple is not easy</a></li>
-          <li><a href="storytelling.html">Storytelling</a></li>
-          <li><a href="wealth.html">Wealth</a></li>
-        </ul>
-      </section>
-
-      <!-- Frameworks Section -->
-      <section id="frameworks" class="section">
-        <h3>Frameworks for life</h3>
-        <div class="subtitle">Frameworks that help me make sense of the world.</div>
-
-        <ul class="content-list">
-          <li><a href="articulating-your-thoughts.html">Frameworks for articulating your thoughts</a></li>
-          <li><a href="explain-why-things-happen.html">Frameworks that explain why things happen the way they do</a></li>
-        </ul>
-      </section>
-
-      <!-- Books Section -->
-      <section id="books" class="section">
-        <h3>Books that have shaped my thinking</h3>
-
-        <ul class="content-list">
-          <li>
-            <a href="https://www.goodreads.com/book/show/25899336-when-breath-becomes-air" target="_blank">
-              When Breath Becomes Air
-            </a>
-          </li>
-          <li>
-            <a href="https://www.goodreads.com/en/book/show/35957157" target="_blank">
-              Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts
-            </a>
-          </li>
-          <li>
-            <a href="https://www.goodreads.com/book/show/18077903-creativity-inc" target="_blank">
-              Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration
-            </a>
-          </li>
-          <li>
-            <a href="https://www.goodreads.com/book/show/37786022-storyworthy" target="_blank">
-              Storyworthy: Engage, Teach, Persuade, and Change Your Life through the Power of Storytelling
-            </a>
-          </li>
-        </ul>
-      </section>
-
-      <!-- Projects Section -->
-      <section id="projects" class="section">
-        <h3>Projects</h3>
-
-        <ul class="content-list">
-          <li>
-            <a href="https://makeyourpoint.app" target="_blank">Make Your Point</a> - A 25-day daily-practice program for working professionals. Based on the principles in Simply Said: Communicating Better at Work and Beyond by Jay Sullivan.
-          </li>
-          <li>
-            <a href="https://storycoach.app" target="_blank">StoryCoach</a> - Develop your storytelling skills using AI-powered writing tools, buliding daily habits, and doing skill-building exercises.
-          </li>
-          <li>
-            <a href="https://rutuldave.com/decision-ninja-blog/" target="_blank">Decision Ninja Blog</a> - Tools, tips, and tricks to improve the quality of all your personal and professional decisions.
-          </li>
-          <li>
-            <a href="https://github.com/stockandawe/saas-startup-cto-checklist" target="_blank">SaaS Startup CTO Checklist</a> - Checklist of all things to consider for CTOs of SaaS startups.
-          </li>
-          <li>
-            <a href="http://rutuldave.com/product-pick-two/" target="_blank">Product Pick Two</a> - Visualizing the challenge of Product Management.
-          </li>
-          <li>
-            <a href="http://rutuldave.com/IdeaList_iOS/" target="_blank">Idea List - iOS App</a> - My first iOS native app created in Swift 2.0.
-          </li>
-          <li>
-            <a href="http://rutuldave.com/startup-bookmarks/" target="_blank">Startup Bookmarks</a> - An active list of resources for building a better startup.
-          </li>
-          <li>
-            <a href="http://rutuldave.com/c-and-cpp-test-programs" target="_blank">C/C++ Tests</a> - Test projects and code samples in c and c++ created as I navigated the world of systems programming.
-          </li>
-          <li>
-            <a href="http://rutuldave.com/rider_flow" target="_blank">Flow</a> - App for Reroute Hackathon on 19th Oct, 2012.
-          </li>
-          <li>
-            <a href="http://rutuldave.com/IsItAStartup" target="_blank">IsItAStartup?</a> - A simple Q&A bot that helps you evaluate if you should launch a startup based on your idea.
-          </li>
-        </ul>
-      </section>
-
-      <!-- Awards Section -->
-      <section id="awards" class="section">
-        <h3>Awards / Notable mentions</h3>
-
-        <ul class="content-list">
-          <li>
-            <a href="https://www.inman.com/best-of-finance-awards/" target="_blank">
-              2025 Inman Best of Finance Award Winner.
-            </a>
-          </li>
-          <li>
-            <a href="https://www.inman.com/best-of-finance-awards-2024/" target="_blank">
-              2024 Inman Best of Finance Award Winner.
-            </a>
-          </li>
-          <li>
-            <a href="https://www.housingwire.com/winner-profile/2023-hw-vanguard-rutul-dave/" target="_blank">
-              2023 HW Vanguard Award Winner.
-            </a>
-          </li>
-          <li>
-            <a href="https://thefinancialtechnologyreport.com/the-top-25-financial-technology-ctos-and-cios-of-2023/" target="_blank">
-              2023 Top 25 Financial Technology CTOs and CIOs</a> by The Financial Technology Report.
-          </li>
-          <li>
-            <a href="https://www.housingwire.com/winner-profile/2022-hw-tech-trendsetter-rutul-dave/" target="_blank">
-              2022 HW Tech Trendsetter: Rutul Davé
-            </a>
-          </li>
-          <li>
-            <a href="https://www.verdict.co.uk/cto-talk-qa-with-rutul-dave-of-maxwell/" target="_blank">2022 CTO Talk: Q&A with Rutul Davé of Maxwell</a> with Verdict.
-          </li>
-          <li>
-            2014 CauseArtist's list of <a href="http://causeartist.com/15-social-entrepreneurs-watch-2014" target="_blank">
-              Social Entrepreneurs to watch for in 2014</a>.
-          </li>
-          <li>
-            <a href="http://online.wsj.com/news/articles/SB10001424127887324880504578298150540138218" target="_blank">2013 Featured
-            in The Wall Street Journal</a> and on a <a href="https://vimeo.com/64199097" target="_blank">KRON news segment on on startup visas</a>.
-          </li>
-        </ul>
-      </section>
-
-      <!-- Footer -->
-      <footer class="site-footer">
-        <div class="row">
-          <div class="col-md-6">
-            <p class="text-muted">&copy; 2025 Rutul Davè. All rights reserved.</p>
-          </div>
-          <div class="col-md-6">
-            <ul class="social-links">
-              <li><a href="https://www.linkedin.com/in/rutul-dave/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="https://github.com/stockandawe" target="_blank"><i class="fa fa-github"></i></a></li>
-              <li><a href="mailto:rutuldave@gmail.com"><i class="fa fa-envelope"></i></a></li>
-            </ul>
+    <!-- WRITING -->
+    <section class="section wrap" id="writing">
+      <div class="head-row reveal">
+        <div>
+          <p class="kicker">Writing &amp; notes</p>
+          <h2 class="statement">Ideas that guide how I work and think.</h2>
+        </div>
+      </div>
+      <div class="writing-cols reveal">
+        <div>
+          <p class="pile-h">Professional principles <span>09</span></p>
+          <div class="pile">
+            <a href="consistency.html"><span class="n">01</span><span class="t">Consistency</span><span class="ar">↗</span></a>
+            <a href="focus.html"><span class="n">02</span><span class="t">Focus</span><span class="ar">↗</span></a>
+            <a href="happiness.html"><span class="n">03</span><span class="t">Happiness</span><span class="ar">↗</span></a>
+            <a href="monkeys-and-pedestals.html"><span class="n">04</span><span class="t">Monkeys and Pedestals</span><span class="ar">↗</span></a>
+            <a href="questions.html"><span class="n">05</span><span class="t">Questions</span><span class="ar">↗</span></a>
+            <a href="stoicism.html"><span class="n">06</span><span class="t">Stoicism</span><span class="ar">↗</span></a>
+            <a href="simple-not-easy.html"><span class="n">07</span><span class="t">Simple is not easy</span><span class="ar">↗</span></a>
+            <a href="storytelling.html"><span class="n">08</span><span class="t">Storytelling</span><span class="ar">↗</span></a>
+            <a href="wealth.html"><span class="n">09</span><span class="t">Wealth</span><span class="ar">↗</span></a>
           </div>
         </div>
-      </footer>
-    </div><!-- /.container -->
+        <div>
+          <p class="pile-h">Frameworks for life <span>02</span></p>
+          <div class="pile">
+            <a href="articulating-your-thoughts.html"><span class="n">01</span><span class="t">Articulating your thoughts</span><span class="ar">↗</span></a>
+            <a href="explain-why-things-happen.html"><span class="n">02</span><span class="t">Why things happen the way they do</span><span class="ar">↗</span></a>
+          </div>
+          <p class="lede" style="margin-top:22px; font-size:15px;">A growing collection of quotes, mental models, and stories I return to often.</p>
+        </div>
+      </div>
+    </section>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-  </body>
+    <!-- BOOKS -->
+    <section class="section wrap" id="books">
+      <div class="head-row reveal">
+        <div>
+          <p class="kicker">Bookshelf</p>
+          <h2 class="statement">Books that shaped my thinking.</h2>
+        </div>
+      </div>
+      <div class="book-list reveal">
+        <a class="book" href="https://www.goodreads.com/book/show/25899336-when-breath-becomes-air" target="_blank" rel="noopener"><span class="spine"></span><span class="bt">When Breath Becomes Air</span></a>
+        <a class="book" href="https://www.goodreads.com/en/book/show/35957157" target="_blank" rel="noopener"><span class="spine"></span><span class="bt">Thinking in Bets</span></a>
+        <a class="book" href="https://www.goodreads.com/book/show/18077903-creativity-inc" target="_blank" rel="noopener"><span class="spine"></span><span class="bt">Creativity, Inc.</span></a>
+        <a class="book" href="https://www.goodreads.com/book/show/37786022-storyworthy" target="_blank" rel="noopener"><span class="spine"></span><span class="bt">Storyworthy</span></a>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section class="section wrap" id="awards">
+      <div class="head-row reveal">
+        <div>
+          <p class="kicker">Recognition</p>
+          <h2 class="statement">Awards &amp; notable mentions.</h2>
+        </div>
+      </div>
+      <div class="award-list reveal">
+        <div class="award"><span class="yr">2025</span><span class="at"><a href="https://www.inman.com/best-of-finance-awards/" target="_blank" rel="noopener">Inman Best of Finance Award Winner</a></span><span class="org">Inman</span></div>
+        <div class="award"><span class="yr">2024</span><span class="at"><a href="https://www.inman.com/best-of-finance-awards-2024/" target="_blank" rel="noopener">Inman Best of Finance Award Winner</a></span><span class="org">Inman</span></div>
+        <div class="award"><span class="yr">2023</span><span class="at"><a href="https://www.housingwire.com/winner-profile/2023-hw-vanguard-rutul-dave/" target="_blank" rel="noopener">HW Vanguard Award Winner</a></span><span class="org">HousingWire</span></div>
+        <div class="award"><span class="yr">2023</span><span class="at"><a href="https://thefinancialtechnologyreport.com/the-top-25-financial-technology-ctos-and-cios-of-2023/" target="_blank" rel="noopener">Top 25 Financial Technology CTOs &amp; CIOs</a></span><span class="org">The FinTech Report</span></div>
+        <div class="award"><span class="yr">2022</span><span class="at"><a href="https://www.housingwire.com/winner-profile/2022-hw-tech-trendsetter-rutul-dave/" target="_blank" rel="noopener">HW Tech Trendsetter</a></span><span class="org">HousingWire</span></div>
+        <div class="award"><span class="yr">2022</span><span class="at"><a href="https://www.verdict.co.uk/cto-talk-qa-with-rutul-dave-of-maxwell/" target="_blank" rel="noopener">CTO Talk: Q&amp;A with Rutul Davé of Maxwell</a></span><span class="org">Verdict</span></div>
+        <div class="award"><span class="yr">2014</span><span class="at"><a href="http://causeartist.com/15-social-entrepreneurs-watch-2014" target="_blank" rel="noopener">Social Entrepreneurs to watch for in 2014</a></span><span class="org">CauseArtist</span></div>
+        <div class="award"><span class="yr">2013</span><span class="at">Featured in <a href="http://online.wsj.com/news/articles/SB10001424127887324880504578298150540138218" target="_blank" rel="noopener">The Wall Street Journal</a> and a <a href="https://vimeo.com/64199097" target="_blank" rel="noopener">KRON segment on startup visas</a></span><span class="org">WSJ · KRON</span></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact wrap" id="contact">
+      <div class="contact-card reveal">
+        <p class="kicker">Get in touch</p>
+        <h2>Let's make something <em>worth making.</em></h2>
+        <p>If you've got a project, an opportunity, or just want to trade notes on building products — I'm all ears.</p>
+        <div class="contact-actions">
+          <a class="btn btn-light" href="mailto:rutuldave@gmail.com">Say hello <span class="arrow">↗</span></a>
+          <a class="btn btn-outline-light" href="https://www.linkedin.com/in/rutul-dave/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <span class="footer-brand">Rutul Davè</span>
+      <ul class="footer-links">
+        <li><a href="https://www.linkedin.com/in/rutul-dave/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.3 8.65 21 11 21 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3-2.01 0-2.32 1.57-2.32 3.2V21H9z"/></svg></a></li>
+        <li><a href="https://github.com/stockandawe" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.4 9.4 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg></a></li>
+        <li><a href="mailto:rutuldave@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></a></li>
+      </ul>
+      <span class="footer-copy">© 2025 Rutul Davè</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/contributions.js"></script>
+  <script>buildContributions('ghA', 'stockandawe');</script>
+</body>
 </html>
